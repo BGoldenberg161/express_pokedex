@@ -9,6 +9,12 @@
     <h4>Height: <%=(pokedata.height * 0.1).toFixed(2)%> meter(s)</h4>
     <h4>Weight: <%=(pokedata.weight * 0.1).toFixed(2)%> kilogram(s)</h4>
     <ul>
+        <h4>Types: </h4>
+        <% for (let i = 0; i < pokedata.types.length; i++) {%>
+            <li><%=pokedata.types[i].type.name%></li>
+        <% } %> 
+    </ul>
+    <ul>
         <h4>Moves: </h4>
         <% for (let i = 0; i < pokedata.moves.length; i++) {%>
             <li><%=pokedata.moves[i].move.name%></li>

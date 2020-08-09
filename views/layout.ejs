@@ -6,22 +6,23 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Pokedex</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   </head>
   <body>
+    <!-- nav bar -->
     <nav>
       <div class="nav-wrapper amber">
-        <a href="../index.js" class="brand-logo">PokeDex</a>
+        <a href="../" class="brand-logo">PokeDex</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="../routes/pokemon.js">Favorites</a></li>
-          <li><a href="../routes/collected.js">Collected</a></li>
+          <li><a href="../pokemon">Favorites</a></li>
+          <!-- <li><a href="../collected.js">Collected</a></li> -->
         </ul>
       </div>
     </nav>
 
     <%- body %>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>

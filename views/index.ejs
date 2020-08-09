@@ -1,14 +1,16 @@
 <div class="container">
-  <h1 class="text-center">The Original 151 Pokemon</h1>
+  <h1 class="text-center"><b>The Original 151 Pokemon</b></h1>
 
   <% pokemon.forEach( pokemon => { %>
     <div class="well">
-      <h2><%= pokemon.name %></h2>
+      <% nameArr = pokemon.name.split('') %>
+      <% nameArr[0] = nameArr[0].toUpperCase() %> 
+      <% capName = nameArr.join('') %> 
+      <h2><%=capName%></h2>
       <form method="POST" action="/pokemon">
         <input hidden type="text" name="name" value="<%= pokemon.name %>">
-        <button class="btn btn-primary" type="submit">Add to Favorite Pokemon</button>
+        <button class="blue-grey darken-3 white-text z-depth-2" type="submit">Add to Favorites</button>
       </form>
     </div>
   <% }); %>
-
 </div>

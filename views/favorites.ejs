@@ -1,14 +1,18 @@
 <div class="container">
-    <h1 class="text-center">Favorites</h1>
+    <h1 class="text-center"><b>Favorites</b></h1>
   
     <% pokemon.forEach( fave => { %>
       <div class="well">
         <a href="/pokemon/<%= fave.name %>">
-            <h2><%= fave.name %></h2>
+            <% nameArr = fave.name.split('') %>
+            <% nameArr[0] = nameArr[0].toUpperCase() %> 
+            <% capName = nameArr.join('') %> 
+            <h2><%=capName%></h2>
         </a>
+        <!-- delete button -->
         <form method="POST" action="/pokemon?_method=DELETE">
             <input type="hidden" name="name" value="<%= fave.name %>">
-            <button class="btn btn-primary" type="submit">Remove from Favorite Pokemon</button>
+            <button class="blue-grey darken-3 white-text z-depth-2" type="submit">Remove from Favorites</button>
         </form>
     </div>
     <% }) %>
