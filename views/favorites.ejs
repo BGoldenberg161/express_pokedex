@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 class="text-center">Favorites</h1>
+  
+    <% pokemon.forEach( fave => { %>
+      <div class="well">
+        <a href="/pokemon/<%= fave.name %>">
+            <h2><%= fave.name %></h2>
+        </a>
+        <form method="POST" action="/pokemon?_method=DELETE">
+            <input type="hidden" name="name" value="<%= fave.name %>">
+            <button class="btn btn-primary" type="submit">Remove from Favorite Pokemon</button>
+        </form>
+    </div>
+    <% }) %>
+</div>

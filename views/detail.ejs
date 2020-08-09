@@ -1,0 +1,17 @@
+<div class="well">
+    <div class='sprites'>
+        <img src="<%= pokedata.sprites.front_default %>" width='150px'alt="Pokémon Sprite">
+    </div>
+    <% nameArr = pokedata.name.split('') %>
+    <% nameArr[0] = nameArr[0].toUpperCase() %> 
+    <% capName = nameArr.join('') %> 
+    <h1><%=capName%></h1>
+    <h4>Height: <%=(pokedata.height * 0.1).toFixed(2)%> meter(s)</h4>
+    <h4>Weight: <%=(pokedata.weight * 0.1).toFixed(2)%> kilogram(s)</h4>
+    <ul>
+        <h4>Moves: </h4>
+        <% for (let i = 0; i < pokedata.moves.length; i++) {%>
+            <li><%=pokedata.moves[i].move.name%></li>
+        <% } %> 
+    </ul>
+</div>

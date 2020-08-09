@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
+
+body {
+    background-color: rgb(164, 0, 0);
+    font-family: 'Lemonada', cursive;
+}
+
+h1, h4, ul {
+    color: rgba(33, 32, 32, 0.75);
+}
+
+.well {
+    text-align: center;
+    border-radius: 15px;
+    width: 50%;
+    background: linear-gradient(rgb(164, 0, 0), rgb(255, 180, 18));
+    box-shadow: 5px 5px rgba(118, 252, 207, 0.44);
+}
+
+.sprites {
+    background-color: rgb(255, 180, 18);
+    width: 25%;
+    border-radius: 15px;
+}
